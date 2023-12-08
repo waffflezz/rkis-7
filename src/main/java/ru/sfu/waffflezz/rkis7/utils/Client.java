@@ -90,10 +90,12 @@ public class Client implements CommandLineRunner {
         quantity
     );
     log("Обновляем посуду с id = " + id + " на \n" + vessel, "Client");
+    clientService.update(id, vessel);
   }
 
   public void deleteVessel(int id) {
     log("Удаляем посуду с id = " + id, "Client");
+    clientService.delete(id);
   }
 
   @Override
